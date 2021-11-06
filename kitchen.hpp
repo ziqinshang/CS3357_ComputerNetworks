@@ -15,7 +15,7 @@ class kitchen{
 public:
     kitchen();
     ~kitchen();
-    void viewOrder(queue<Order>);
+    void viewOrder(std::queue<Order>);
     bool finish(int);
 };
 

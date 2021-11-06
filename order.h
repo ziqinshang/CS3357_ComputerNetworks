@@ -47,6 +47,9 @@ public:
 
     //push dish to ordereditems 把菜加到数组里面
     void pushItems(Dish);
+    
+    //a function that compare orders
+    bool ordercompare(Order);
 
 };
 

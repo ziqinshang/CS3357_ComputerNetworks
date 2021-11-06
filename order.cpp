@@ -74,3 +74,10 @@ void Order::pushItems(Dish dish){
     orderedItems[dishNum]= &dish;
     dishNum+=1;
 }
+
+bool Order::ordercompare(Order order1){
+    if(orderID == order1.getorderID()){
+        return true;
+    }
+    else return false;
+}

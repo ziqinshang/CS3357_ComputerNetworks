@@ -6,6 +6,12 @@
 //
 
 #include <iostream>
+#include "kitchen.hpp"
+#include "orderqueue.h"
+#include "order.h"
+#include "dish.h"
+#include "Table.hpp"
+#include "waiter.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
