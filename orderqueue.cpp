@@ -3,11 +3,22 @@
 #include <string>
 #include <stdlib.h>
 #include "orderqueue.h"
-#include "kitchen.hpp"
+#include "kitchen.h"
 #include "order.h"
-#include "Table.hpp"
+#include "Table.h"
 using namespace std;
-
+int OrderQueue::getsize(){
+    return orderqueue.size();
+}
+void OrderQueue::displayorders(){
+    int queueSize = orderqueue.size();
+    for(int i=0; i<queueSize; i++){
+        cout << orderqueue.front().getorderID()<< "->";
+        orderqueue.push(orderqueue.front());
+        orderqueue.pop();
+    }
+    cout<<endl;
+}
 void OrderQueue::appendorder(Order neworder){
     orderqueue.push(neworder);
 }
@@ -19,7 +30,10 @@ void OrderQueue::hurry(Order priorityorder){
     std::queue<Order> neworderqueue;
     neworderqueue.push(priorityorder);
     for(int i=0; i<queueSize; i++){
-        if (priorityorder.ordercompare(orderqueue.front())) continue;
+        if (priorityorder.ordercompare(orderqueue.front())) {
+            orderqueue.pop();
+            continue;
+        }
         neworderqueue.push(orderqueue.front());
         orderqueue.pop();
     }

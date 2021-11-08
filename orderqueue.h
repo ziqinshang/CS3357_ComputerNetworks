@@ -14,6 +14,8 @@ private:
     std::queue<Order> orderqueue; //the dish queue waiting to be cooked
 
 public:
+    int getsize();
+    void displayorders();
     void appendorder(Order);
     void poporder();
     void hurry(Order);
