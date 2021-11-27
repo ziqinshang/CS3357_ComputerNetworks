@@ -3,13 +3,20 @@
 #include <string>
 #include <stdlib.h>
 #include "orderqueue.h"
+<<<<<<< HEAD
 #include "kitchen.hpp"
 #include "order.h"
 #include "Table.hpp"
+=======
+#include "kitchen.h"
+#include "order.h"
+#include "Table.h"
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
 using namespace std;
 int OrderQueue::getsize(){
     return orderqueue.size();
 }
+<<<<<<< HEAD
 std::string OrderQueue::displayorders_str(){
     std::string orders_str;
     int queueSize = orderqueue.size();
@@ -26,6 +33,8 @@ std::string OrderQueue::displayorders_str(){
     }
     return orders_str;
 }
+=======
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
 void OrderQueue::displayorders(){
     int queueSize = orderqueue.size();
     for(int i=0; i<queueSize; i++){
@@ -55,6 +64,7 @@ void OrderQueue::hurry(Order priorityorder){
     }
     orderqueue = neworderqueue;
 }
+<<<<<<< HEAD
 Order OrderQueue::findorderbytableid(int tableid){
     int queueSize = orderqueue.size();
     std::queue<Order> neworderqueue;
@@ -84,6 +94,8 @@ Order OrderQueue::findorderbytableid(int tableid){
 //    }
 //    orderqueue = neworderqueue;
 //}
+=======
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
 //void Orderqueue::add(orderID){
 //    Orders.push(orderID);
 //}

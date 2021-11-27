@@ -15,13 +15,19 @@ private:
 
 public:
     int getsize();
+<<<<<<< HEAD
     std::string displayorders_str();
+=======
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
     void displayorders();
     void appendorder(Order);
     void poporder();
     void hurry(Order);
+<<<<<<< HEAD
     void hurrybytableid(int);
     Order findorderbytableid(int);
+=======
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
     //order dishes are pushed into cook waiting queue
 
     //厨房搞定后如何设置更好,需要kitchen那里设置下吗

@@ -18,7 +18,11 @@ Order::Order(int oid,int state,int tid){
 //A destructor to tear things down when objects are destroyed
 //return "destruct"
 Order::~Order(void){
+<<<<<<< HEAD
     // cout<<"destruct"<<endl;
+=======
+   //cout<<"destruct"<<endl;
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
 }
 
 //A getter, use it to get order ID

@@ -20,7 +20,11 @@ Dish::Dish(std::string input){
 //A destructor to tear things down when objects are destroyed
 //return "destruct"
 Dish::~Dish(void){
+<<<<<<< HEAD
     // cout<<"destruct"<<endl;
+=======
+    
+>>>>>>> 5950259a50b12d9c0a239bd8591082712a3fe0dc
 }
 
 //A getter, use it to get name of dish
