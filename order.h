@@ -38,6 +38,7 @@ public:
     int gettableID();
     int getdishNum();
     void getItems();//print all items' names in order,打印所有点过的菜
+    std::string getitems_str();
 
 
     //A setter
@@ -47,6 +48,9 @@ public:
 
     //push dish to ordereditems 把菜加到数组里面
     void pushItems(Dish);
+    
+    //a function that compare orders
+    bool ordercompare(Order);
 
 };
 

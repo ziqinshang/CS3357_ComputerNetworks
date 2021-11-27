@@ -18,7 +18,7 @@ Order::Order(int oid,int state,int tid){
 //A destructor to tear things down when objects are destroyed
 //return "destruct"
 Order::~Order(void){
-    cout<<"destruct"<<endl;
+    // cout<<"destruct"<<endl;
 }
 
 //A getter, use it to get order ID
@@ -47,6 +47,13 @@ void Order::getItems(){
     }
 }
 
+std::string Order::getitems_str(){
+    std::string items;
+    for ( int i = 0; i < dishNum; i++ ){
+        items += std::to_string(i) + " : " + orderedItems[ i ]->getname() + "  ";
+    }
+    return items;
+}
 //A getter, use it to get the number of ordered dishes
 //return order's the number of ordered dishes
 int Order::getdishNum(){
@@ -73,4 +80,11 @@ void Order::settableID(int i){
 void Order::pushItems(Dish dish){
     orderedItems[dishNum]= &dish;
     dishNum+=1;
+}
+
+bool Order::ordercompare(Order order1){
+    if(orderID == order1.getorderID()){
+        return true;
+    }
+    else return false;
 }
