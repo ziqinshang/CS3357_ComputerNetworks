@@ -1,0 +1,11 @@
+SHOW DATABASES;
+DROP DATABASE 94_assign2db;
+CREATE DATABASE 94_assign2db;
+USE 94_assign2db;
+SHOW TABLES;
+CREATE TABLE bus (licenseplate CHAR(7) NOT NULL, capacity INT NOT NULL, PRIMARY KEY (licenseplate));
+CREATE TABLE bustrip (tripid INT NOT NULL, startdate DATE NOT NULL, enddate DATE NOT NULL, country VARCHAR(30) NOT NULL,tripname VARCHAR(50) NOT NULL,licenseplate CHAR(7) NOT NULL, FOREIGN KEY (licenseplate) REFERENCES bus(licenseplate), PRIMARY KEY (tripid));
+CREATE TABLE passenger (passengerid INT NOT NULL, firstname VARCHAR(20) NOT NULL, lastname VARCHAR(20) NOT NULL, PRIMARY KEY (passengerid));
+CREATE TABLE passport (passportnum CHAR(4) NOT NULL, expirydate DATE NOT NULL, citizenship VARCHAR(30) NOT NULL, birthdate DATE NOT NULL, passengerid INT NOT NULL,FOREIGN KEY (passengerid) REFERENCES passenger(passengerid) ON DELETE CASCADE, PRIMARY KEY (passportnum));
+CREATE TABLE book (passengerid INT NOT NULL, tripid INT NOT NULL, money FLOAT NOT NULL,PRIMARY KEY (tripid,passengerid),FOREIGN KEY (passengerid) REFERENCES passenger(passengerid) ON DELETE CASCADE, FOREIGN KEY (tripid) REFERENCES bustrip(tripid));
+SHOW TABLES;
